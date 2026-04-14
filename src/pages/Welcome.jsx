@@ -2,6 +2,7 @@ import NavigationNavbar from "../components/navigations/NavigationNavbar";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Mail } from "lucide-react";
 import Footer from "../components/navigations/Footer";
+import { Link } from "react-router-dom";
 
 export default function Welcome() {
       return (
@@ -62,14 +63,14 @@ export default function Welcome() {
                                           Project Experience
                                     </h2>
 
-                                    <a
-                                          href="/project"
+                                    <Link
+                                          to="/project"
                                           className="group flex items-center gap-2 text-sm md:text-base font-thin text-gray-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500 transition-colors duration-200"
                                     >
                                           <span className="group-hover:text-sky-500">
                                                 View all project experiences →
                                           </span>
-                                    </a>
+                                    </Link>
                               </div>
 
                               <div className="mt-8 grid gap-6">
