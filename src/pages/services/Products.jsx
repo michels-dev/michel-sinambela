@@ -20,12 +20,14 @@ export default function Products() {
             "Security & Data Protection",
       ];
 
-  return (
-      <div className="min-h-screen bg-white dark:bg-darkbg text-black dark:text-white">
-            <NavigationNavbar />
-                  <div className="pt-44 pb-20 px-4 flex justify-center">
-                        <div className="w-full max-w-[700px] px-6">
-                              <h1 className="text-2xl md:text-3xl font-semibold leading-snug text-gray-700 dark:text-gray-400">
+      return (
+            <div className="min-h-screen bg-white dark:bg-darkbg text-black dark:text-white">
+                  <NavigationNavbar />
+                  <div className="pt-28 sm:pt-36 md:pt-44 pb-16 sm:pb-20 px-4 flex justify-center">
+                        <div className="w-full max-w-[700px] px-4 sm:px-6">
+
+                              {/* Heading */}
+                              <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-snug text-gray-700 dark:text-gray-400">
                                     A <span className="text-black dark:text-white">powerful</span> and
                                     <br />
                                     <span className="text-black dark:text-white">well-structured system</span>
@@ -33,15 +35,17 @@ export default function Products() {
                                     is <span className="text-sky-500">coming soon.</span>
                               </h1>
 
-                              <div className="mt-6 inline-block rounded-md border border-yellow-400/30 text-yellow-500 dark:text-yellow-400 bg-yellow-400/10 px-3 py-1">
+                              {/* Badge */}
+                              <div className="mt-5 sm:mt-6 inline-block rounded-md border border-yellow-400/30 text-yellow-500 dark:text-yellow-400 bg-yellow-400/10 px-3 py-1">
                                     <p className="text-xs md:text-sm tracking-wide uppercase">
                                           Smart Digital Approval & Workflow System
                                     </p>
                               </div>
 
+                              {/* Description */}
                               <p className="mt-4 text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                                     <span className="font-semibold text-black dark:text-white">
-                                    FlowApprove
+                                          FlowApprove
                                     </span>{" "}
                                     is a smart digital approval and workflow system designed to help
                                     companies eliminate manual processes, accelerate decision-making,
@@ -61,7 +65,8 @@ export default function Products() {
                                     efficiently and scale with confidence.
                               </p>
 
-                              <div className="mt-10">
+                              {/* Key Features */}
+                              <div className="mt-8 sm:mt-10">
                                     <h2 className="text-base md:text-lg font-semibold text-black dark:text-white">
                                           Key Features
                                     </h2>
@@ -78,7 +83,7 @@ export default function Products() {
                               </div>
                         </div>
                   </div>
-            <Footer />
-      </div>
-  );
+                  <Footer />
+            </div>
+      );
 }
