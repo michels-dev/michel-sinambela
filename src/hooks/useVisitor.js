@@ -13,6 +13,9 @@ export default function useVisitor() {
                         }
 
                         const res = await fetch("/api/visitor");
+                        if (!res.ok) {
+                              throw new Error("API not found");
+                        }
                         const data = await res.json();
 
                         setTotal(data.total);
