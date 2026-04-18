@@ -3,8 +3,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Mail } from "lucide-react";
 import Footer from "../components/navigations/Footer";
 import { Link } from "react-router-dom";
+import useVisitor from "../hooks/useVisitor";
+import VisitorCard from "../components/cards/VisitorCard";
 
 export default function Welcome() {
+      const totalVisitor = useVisitor()
+
       return (
             <div className="min-h-screen bg-white dark:bg-darkbg text-black dark:text-white">
                   <NavigationNavbar />
@@ -40,6 +44,8 @@ export default function Welcome() {
                                     </span>
                                     .
                               </p>
+
+                              <VisitorCard total={totalVisitor} />
 
                               {/* Social Links */}
                               <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm md:text-base font-medium">
