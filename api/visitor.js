@@ -11,14 +11,13 @@ export default async function handler(req, res) {
                   const total = await redis.incr("visitors");
                   return res.status(200).json({ total });
             }
-
             if (req.method === "GET") {
                   const total = (await redis.get("visitors")) || 0;
                   return res.status(200).json({ total });
             }
-
             return res.status(405).json({ message: "Method not allowed" });
       } catch (err) {
+            console.error(err);
             return res.status(500).json({ error: "Server error" });
       }
 }
